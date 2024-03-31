@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "118483075333",
+    "project_id": "char-dham-connect",
+    "storage_bucket": "char-dham-connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118483075333:android:e58d8e70f99293d0ac776c",
+        "android_client_info": {
+          "package_name": "com.shubhamtripz.chardhamconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe9ZDaMO-EHgVhrivgVwJW_aop8X-OAJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

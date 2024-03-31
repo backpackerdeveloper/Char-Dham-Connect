@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="Good Afternoon," />
+
+    <TextView
+        android:id="@+id/text_view_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:text="Login now to get exciting offers and best travel experience" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <ImageButton
+            android:id="@+id/image_button_flights"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/demologo"
+            android:contentDescription="flights" />
+
+        <ImageButton
+            android:id="@+id/image_button_hotels"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/demologo"
+            android:contentDescription="TODO" />
+
+        <ImageButton
+            android:id="@+id/image_button_trains_bus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/demologo"
+            android:contentDescription="TODO" />
+
+        <ImageButton
+            android:id="@+id/image_button_holiday_packages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/demologo"
+            android:contentDescription="TODO" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+
+        <ImageButton
+            android:id="@+id/image_button_airport_cabs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/demologo"
+            android:contentDescription="TODO" />
+
+        <ImageButton
+            android:id="@+id/image_button_homestays_villas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/demologo"
+            android:contentDescription="TODO" />
+
+        <ImageButton
+            android:id="@+id/image_button_outstation_cabs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/demologo"
+            android:contentDescription="TODO" />
+
+        <ImageButton
+            android:id="@+id/image_button_forex_card_currency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/demologo"
+            android:contentDescription="TODO" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_explore_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Explore More"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

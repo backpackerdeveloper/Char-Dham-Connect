@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="start"
+            android:id="@+id/home_profile"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/undrawuser"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/iv_app_icon"
+            android:layout_marginStart="@dimen/_70sdp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/demologo"
+            android:contentDescription="App Icon" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_80sdp"
+            android:id="@+id/iv_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:contentDescription="Search"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:src="@drawable/searchtool" />
+
+    </LinearLayout>
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/notification_card"
+    android:backgroundTint="#FF7481"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_margin="@dimen/_5sdp"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/kedarimg"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/kedarnath"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/notifi_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:fontFamily="@font/calibri"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_toRightOf="@+id/kedarimg"
+            android:text=" Kedarnath Temple Opening Date: 10 May 2024 Morning 7:00 AM." />
+
+        <TextView
+            android:id="@+id/know_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Know More.."
+            android:textColor="#041AE8"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/bariol_bold"
+            android:layout_below="@+id/notifi_txt"
+            android:layout_toRightOf="@+id/kedarimg"
+            android:layout_marginStart="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+
+    <HorizontalScrollView
+        android:id="@+id/hscroll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notification_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/kedarnath_registraion"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/kedarnath_img"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/kedarnath" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kedarnath"
+                    android:maxLines="1"
+                    android:fontFamily="@font/calibri"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/badrinath_registraion"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/badrinath_img"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/badrinath" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Badrinath"
+                    android:maxLines="1"
+                    android:fontFamily="@font/calibri"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gangotri_registraion"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/gangotri_img"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/gangotri" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gangotri"
+                    android:maxLines="1"
+                    android:fontFamily="@font/calibri"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/yamunotri_registraion"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/yamunotri_img"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/yamunotri" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yamunotri"
+                    android:maxLines="1"
+                    android:fontFamily="@font/calibri"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/gmvm_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hscroll"
+        android:layout_margin="@dimen/_10sdp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_gravity="center|start"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book your stay at GMVN"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:id="@+id/gmvn_more_btn"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:text="View More>>"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:textColor="#041AE8"
+            android:textAlignment="textEnd"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/gmvnscroll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gmvm_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tilwara_card"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_7sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+               <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="@dimen/_220sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:src="@drawable/tilwara" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GMVN Tilwara"
+                    android:maxLines="1"
+                    android:fontFamily="@font/futura_medium"
+                    android:ellipsize="end"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="7060212079, Rudraprayag"
+                       android:maxLines="1"
+                       android:fontFamily="@font/calibri"
+                       android:ellipsize="end"
+                       android:textColor="@color/black"
+                       android:textSize="11sp"/>
+
+
+              </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/haridwar_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_7sdp"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/_220sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/alknanda_haridwar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alaknanda, Haridwar"
+                        android:maxLines="1"
+                        android:fontFamily="@font/futura_medium"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9012453541, Haridwar"
+                        android:maxLines="1"
+                        android:fontFamily="@font/calibri"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pauri_card"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_7sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/_220sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/pauri_thumb_khirsu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GMVN Khirsu"
+                        android:maxLines="1"
+                        android:fontFamily="@font/futura_medium"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9568006672, Pauri Garhwal"
+                        android:maxLines="1"
+                        android:fontFamily="@font/calibri"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:elevation="@dimen/_7sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/_220sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/gmvn_gangotri" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GMVN Gangotri"
+                        android:maxLines="1"
+                        android:fontFamily="@font/futura_medium"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9568006669, Uttarkashi"
+                        android:maxLines="1"
+                        android:fontFamily="@font/calibri"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gmvn_badrinath_card"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_7sdp"
+                app:cardCornerRadius="@dimen/_4sdp">
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="@dimen/_220sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/badrinath_yatri_niwas" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GMVN Badrinath"
+                        android:maxLines="1"
+                        android:fontFamily="@font/futura_medium"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9568006651, Chamoli"
+                        android:maxLines="1"
+                        android:fontFamily="@font/calibri"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnav"
+        android:background="@color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
